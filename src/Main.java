@@ -1,5 +1,6 @@
 import java.util.*;
 
+import com.sandbox.generics.Penthouse;
 import com.sandbox.inheritance.C;
 import com.sandbox.inheritance.InheritanceTester;
 import org.apache.commons.lang3.*;
@@ -55,6 +56,13 @@ public class Main {
         inheritanceTester.rawTypes();
     }
 
+    public void boxingConversion() {
+        int i = 3;
+        Integer i1 = (Integer) i;
+        Integer i2 = (Integer) i;
+        System.out.println("(Integer) 3 == (Integer) 3 is " + (i1 == i2));
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
@@ -65,5 +73,7 @@ public class Main {
 
         m.partFour();
         m.partFourInheritance();
+
+        m.boxingConversion();
     }
 }
