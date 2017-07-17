@@ -1,8 +1,8 @@
 import java.util.*;
 
-import com.sandbox.generics.Penthouse;
 import com.sandbox.inheritance.C;
 import com.sandbox.inheritance.InheritanceTester;
+import com.sandbox.packages.papierMâché.ПапьеMâché;
 import org.apache.commons.lang3.*;
 
 public class Main {
@@ -63,6 +63,19 @@ public class Main {
         System.out.println("(Integer) 3 == (Integer) 3 is " + (i1 == i2));
     }
 
+    public void naming() {
+        String s = "abc";
+        String newS = s;
+        s = "ghi";
+        System.out.println(s);
+        System.out.println(newS);
+    }
+
+    public void packages() {
+        ПапьеMâché паьеМаше = new ПапьеMâché(3986);
+        паьеМаше.суперКрутойМетод();
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
@@ -75,5 +88,9 @@ public class Main {
         m.partFourInheritance();
 
         m.boxingConversion();
+
+        m.naming();
+
+        m.packages();
     }
 }
