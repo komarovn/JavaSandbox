@@ -1,7 +1,12 @@
 import java.util.*;
 
+import com.sandbox.ExceptionTesting;
+import com.sandbox.Jam;
+import com.sandbox.generics.Penthouse;
+import com.sandbox.inheritance.C;
 import com.sandbox.inheritance.C;
 import com.sandbox.inheritance.InheritanceTester;
+import com.sandbox.packages.Door;
 import com.sandbox.packages.papierMâché.ПапьеMâché;
 import org.apache.commons.lang3.*;
 
@@ -74,6 +79,19 @@ public class Main {
     public void packages() {
         ПапьеMâché паьеМаше = new ПапьеMâché(3986);
         паьеМаше.суперКрутойМетод();
+
+        Door doorOrWindow = new Penthouse();
+        doorOrWindow.lock();
+    }
+
+    public void testFinallyBlock() {
+        ExceptionTesting exceptionTesting = new ExceptionTesting();
+
+        Jam jam = exceptionTesting.produceJam();
+        System.out.println(jam.getBerryType());
+        
+        jam = exceptionTesting.produceStrawberryJam();
+        System.out.println(jam.getBerryType());
     }
 
     public static void main(String[] args) {
@@ -92,5 +110,7 @@ public class Main {
         m.naming();
 
         m.packages();
+
+        m.testFinallyBlock();
     }
 }
