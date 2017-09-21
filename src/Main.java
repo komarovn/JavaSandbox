@@ -89,7 +89,7 @@ public class Main {
 
         Jam jam = exceptionTesting.produceJam();
         System.out.println(jam.getBerryType());
-        
+
         jam = exceptionTesting.produceStrawberryJam();
         System.out.println(jam.getBerryType());
     }
